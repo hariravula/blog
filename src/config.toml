@@ -1,0 +1,38 @@
+baseURL = "https://hari.io/"
+languageCode = "en-us"
+title = "Hari Ravula"
+theme = "hravula"
+
+[params]
+
+[[params.navitems]]
+name = "Home"
+url = "/"
+
+[[params.navitems]]
+name = "Projects"
+url = "/projects"
+
+[[params.navitems]]
+name = "About"
+url = "/about"
+
+[[params.social]]
+url = "https://twitter.com/hariravula"
+fa_icon = "fab fa-twitter"
+
+[[params.social]]
+url = "https://github.com/hariravula"
+fa_icon = "fab fa-github-alt"
+
+[[params.social]]
+url = "https://www.linkedin.com/in/hari-ravula-136a8015/"
+fa_icon = "fab fa-linkedin-in"
+
+[[params.social]]
+url = "mailto:me@hari.io"
+fa_icon = "fas fa-at"
+
+[[params.social]]
+url = "/index.xml"
+fa_icon = "fas fa-rss"

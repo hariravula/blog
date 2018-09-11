@@ -1,0 +1,10 @@
+{{ if .Paginator.HasNext }}
+<a href="{{ .Paginator.Next.URL }}" class="former"><i class="fas fa-caret-left"></i><span class="pager-text">past</span></a>
+{{ else }}
+<a href="#" class="former disabled"><i class="fas fa-caret-left"></i><span class="pager-text">past</span></a>
+{{ end }}
+{{ if .Paginator.HasPrev }}
+<a href="{{ .Paginator.Prev.URL }}" class="recent"><span class="pager-text">recent</span><i class="fas fa-caret-right"></i></a>
+{{ else }}
+<a href="#" class="recent disabled"><span class="pager-text">recent</span><i class="fas fa-caret-right"></i></a>
+{{ end }}

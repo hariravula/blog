@@ -1,0 +1,39 @@
+{{ partial "header" . }}
+<section id="main-section" class="main-section">
+        <div class="pager top">
+            {{ partial "pager" . }}
+        </div>
+        <ul class="post-list">
+            {{ range where .Data.Pages "Type" "posts" }}
+            <li class="post">
+                <article class="post-content">
+                    <h1 class="post-title">{{ .Title }}{{ if .Draft }} ::Draft{{ end }}</h1>
+                    <div class="post-date">{{ .Date.Format "January 2, 2006" }}</div>
+                    <p class="summary">{{ .Summary | plainify | safeHTML }}</p>
+                    <div class="more-options">
+                        {{ if true  }}
+                        <a href="{{ .Permalink }}" class="read-more">Read more ...</a>
+                        {{ end }}
+                        {{ if false }}
+                        <div class="tags-section">
+                            <span>Tags:</span>
+                            <ul class="tags">
+                                <li class="tag-item"><a href="#">open source</a></li>
+                                <li class="tag-item"><a href="#">Javascript</a></li>
+                            </ul>
+                        </div>
+                        {{ end }}
+                    </div>
+                </article>
+            </li>
+            {{ end }}
+        </ul>
+        <div class="pager bottom">
+            {{ partial "pager" . }}
+        </div>
+    </section>
+
+</div>
+<script src="{{ .Site.BaseURL }}/js/app.js" type="text/javascript"></script>
+</body>
+</html>

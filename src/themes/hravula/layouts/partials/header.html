@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html{{ with .Site.LanguageCode }} lang="{{ . }}"{{ end }}>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ .Title }}{{ if eq .IsHome false }} | {{ .Site.Title }}{{ end }}</title>
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/main.css" />
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}/fonts/fontawesome-free-5.3.1-web/css/all.css" />
+</head>
+<body>
+    <div class="wrapper">
+        <section id="top-section" class="top-section">
+            <header class="top-title-header">
+                <h1 class="main-title">
+                    {{ .Site.Title }}
+                </h1>
+            </header>
+            <ul class="social">
+                {{ partial "social" . }}
+            </ul>
+            <ul class="nav main-nav">
+                {{ partial "navitems" . }}
+            </ul>
+        </section>
+        <section id="alt-top-section" class="alt-top-section">
+            <header class="alt-top-title-header">
+                <h1 class="alt-main-title">
+                    {{ .Site.Title }}
+                </h1>
+            </header>
+            <ul class="alt-nav">
+                {{ partial "navitems" . }}
+                {{ partial "social" . }}
+            </ul>
+        </section>
