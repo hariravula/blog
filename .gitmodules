@@ -1,4 +1,0 @@
-[submodule "public"]
-	path = public
-	url = git@github.com:hariravula/hariravula.github.io.git
-	branch = master
