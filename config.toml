@@ -3,6 +3,12 @@ languageCode = "en-us"
 title = "Hari Ravula"
 theme = "hravula"
 
+[taxonomies]
+tag = "tags"
+
+[permalinks]
+page = "/:slug/"
+
 [params]
 
 [[params.navitems]]

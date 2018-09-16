@@ -2,19 +2,15 @@
     <div class="post-content">
         <h1 class="post-title">{{ .Title }}{{ if .Draft }} ::Draft{{ end }}</h1>
         <div class="post-date">{{ .Date.Format "January 2, 2006" }}</div>
+        <ul class="page-tags">
+            {{ range $i, $tag := .Params.tags }}
+                <li class="page-tag-item"><a class="page-tag-link" href="{{$.LanguagePrefix }}/tags/{{ $tag | urlize }}">{{ $tag }}</a></li>
+            {{ end }}
+        </ul>
         <p class="summary">{{ .Summary | plainify | safeHTML }}</p>
         <div class="more-options">
             {{ if true  }}
             <a href="{{ .Permalink }}" class="read-more">Read more ...</a>
-            {{ end }}
-            {{ if false }}
-            <div class="tags-section">
-                <span>Tags:</span>
-                <ul class="tags">
-                    <li class="tag-item"><a href="#">open source</a></li>
-                    <li class="tag-item"><a href="#">Javascript</a></li>
-                </ul>
-            </div>
             {{ end }}
         </div>
     </div>

@@ -1,0 +1,15 @@
+<section class="all-tags-list">
+    {{ range $key, $value := .Site.Taxonomies }}
+    {{ $len := len $value }}
+    {{ if (not ( eq $len 0 ) ) }}
+    <div class="section taxonomies">
+        
+        <div class="content">
+            <ul>
+                {{ range first 10 $value.ByCount }}<li><a href="{{$.LanguagePrefix }}/{{ $key }}/{{ .Name | urlize }}">{{ .Name }}</a></li>{{ end }}
+            </ul>
+        </div>
+    </div>
+    {{ end }}
+    {{ end }}
+</section>

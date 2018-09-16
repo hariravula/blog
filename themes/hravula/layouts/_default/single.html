@@ -7,15 +7,14 @@
                     <div class="post-date">{{ .Date.Format "January 2, 2006" }}</div>
                     <p class="content">{{ .Content }}</p>
                     <div class="more-options">
-                        {{ if false }}
-                        <div class="tags-section">    
-                            <span>Tags:</span>
-                            <ul class="tags">
-                                <li class="tag-item"><a href="#">open source</a></li>
-                                <li class="tag-item"><a href="#">Javascript</a></li>
-                            </ul>
-                        </div>
-                        {{ end }}
+                    <div class="tags-section">    
+                        <span>Tagged: </span>
+                        <ul class="tags">
+                            {{ range $i, $tag := .Params.tags }}
+                                <li class="tag-item"><a class="tag-link" href="{{$.LanguagePrefix }}/tags/{{ $tag | urlize }}">{{ $tag }}</a></li>
+                            {{ end }}
+                        </ul>
+                    </div>
                     </div>
                 </article>
             </li>

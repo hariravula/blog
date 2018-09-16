@@ -211,6 +211,7 @@ a.read-more {
 
 .post-date {
     color: var(--light-gray);
+    display: inline;
 }
 
 .post-title {
@@ -230,6 +231,31 @@ a.read-more {
 .post-list {
     margin-bottom: 2rem;
     padding-bottom: 4rem;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+ul.page-tags {
+    display: inline;
+    padding-left: 1em;
+}
+
+li.page-tag-item {
+    display: inline;
+}
+
+a.page-tag-link {
+    color: rgba(255, 91, 81, 0.8);
+    padding: 2px 6px;
+    font-style: italic;
+}
+
+a.page-tag-link:hover {
+    text-decoration: none;
+    background-color: var(--red);
+    color: var(--white);
+    border-radius: 2px;
+    font-style: normal;
 }
 
 @media (max-width: 500px) {
