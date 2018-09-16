@@ -1,8 +1,5 @@
 {{ partial "header" . }}
 <section id="main-section" class="main-section">
-    <div class="pager top">
-        {{ partial "pager" . }}
-    </div>
     <ul class="post-list">
         {{ range where .Data.Pages "Type" "posts" }}
         {{ partial "post" . }}
