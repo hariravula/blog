@@ -11,7 +11,7 @@
 
 
     function adjustTopSection() {
-        console.log('window.pageYOffset: ' + window.pageYOffset + ' , sticky: ' + sticky);
+        //console.log('window.pageYOffset: ' + window.pageYOffset + ' , sticky: ' + sticky);
         if (window.pageYOffset > sticky) {
             altTopSection.style.display = 'block';
             altTopSection.classList.add("sticky");
